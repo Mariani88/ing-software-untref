@@ -2,11 +2,14 @@ package skeleton;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import junit.framework.Assert;
 import cucumber.api.java.en.Then;
 
-
-
 public class Stepdefs {
+	
+    private Calculator calculator = null;
+    private int result;
+	
     @Given("^I have (\\d+) cukes in my belly$")
     public void I_have_cukes_in_my_belly(int cukes) throws Throwable {
         Belly belly = new Belly();
@@ -40,9 +43,10 @@ public class Stepdefs {
             throw new Exception();
         }
     }
+    
+    //******************************************************
+  
 
 
-    private Calculator calculator = null;
-    private int result;
 
 }
