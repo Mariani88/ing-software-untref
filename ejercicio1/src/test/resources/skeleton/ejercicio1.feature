@@ -15,15 +15,13 @@ Scenario: Piedra vs Tijera
   When jugador2 juega PAPEL
   Then gana jugador2
   
+    Scenario: Papel vs Piedra
+  Given jugador1 juega PAPEL
+  When jugador2 juega PIEDRA
+  Then gana jugador1
   
   
-  
-  
-  
-  
-  
-  
-  
+ 
    Scenario: Tijera vs Tijera
   Given jugador1 juega TIJERA
   When jugador2 juega TIJERA
