@@ -20,6 +20,9 @@ Scenario: Piedra vs Tijera
   When jugador2 juega PIEDRA
   Then empate
   
-  
+     Scenario: Papel vs Papel
+  Given jugador1 juega PAPEL
+  When jugador2 juega PAPEL
+  Then empate
   
   

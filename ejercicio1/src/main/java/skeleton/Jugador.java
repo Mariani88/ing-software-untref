@@ -11,8 +11,7 @@ public class Jugador {
 	}
 
 	public void juegaPiedra() {
-		this.opcionElegida = new Piedra();
-		
+		this.opcionElegida = new Piedra();	
 	}
 
 	public void juegaTijera() {
@@ -22,7 +21,6 @@ public class Jugador {
 	public void juegaPapel() {
 		this.opcionElegida = new Papel ();
 	}
-	
 
 	public int getNumeroDeJugador (){
 		return this.numeroDeJugador;
@@ -30,7 +28,6 @@ public class Jugador {
 	
 	public Opcion getOpcionElegida (){
 		
-		return this.opcionElegida;
-		
+		return this.opcionElegida;	
 	}
 }
