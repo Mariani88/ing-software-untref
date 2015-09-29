@@ -17,21 +17,40 @@ public class StepdefsEjercicio1 {
 	
     @Given("^jugador(\\d+) juega PIEDRA$")
     public void jugador_juega_PIEDRA(int numeroDeJugador) throws Throwable {
-    	this.ganador = "gana jugador"+ String.valueOf(numeroDeJugador);
-    	this.jugador1 = new Jugador (numeroDeJugador);
-    	this.jugador1.juegaPiedra();
+    
+    	if (this.jugador1 == null){
+    		this.jugador1 = new Jugador (numeroDeJugador);
+        	this.jugador1.juegaPiedra();
+    	}else {
+    		this.jugador2 = new Jugador (numeroDeJugador);
+        	this.jugador2.juegaPiedra();
+    	}
+    	
     }
 
     @When("^jugador(\\d+) juega TIJERA$")
     public void jugador_juega_TIJERA(int numeroDeJugador) throws Throwable {
-    	this.jugador2 = new Jugador (numeroDeJugador);
-    	this.jugador2.juegaTijera();
-        
+    	
+    	if (this.jugador1 == null){
+    		this.jugador1 = new Jugador (numeroDeJugador);
+        	this.jugador1.juegaTijera(); 
+    	}else{
+    		this.jugador2 = new Jugador (numeroDeJugador);
+        	this.jugador2.juegaTijera();   
+    	}
     }
 
     @Then("^gana jugador(\\d+)$")
     public void gana_jugador(int numeroDeJugador) throws Throwable {
-    	
+    	this.ganador = "gana jugador"+ String.valueOf(numeroDeJugador);
+    	this.juego = new Juego (this.jugador1, this.jugador2);
+        Assert.assertEquals( this.ganador, this.juego.definirGanador () );
+    }
+    
+    
+    @Then("^empate$")
+    public void empate() throws Throwable {
+    	this.ganador = "empate";
     	this.juego = new Juego (this.jugador1, this.jugador2);
         Assert.assertEquals( this.ganador, this.juego.definirGanador () );
     }

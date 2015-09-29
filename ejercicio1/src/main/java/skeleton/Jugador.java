@@ -17,8 +17,12 @@ public class Jugador {
 
 	public void juegaTijera() {
 		this.opcionElegida = new Tijera ();
-		
 	}
+	
+	public void juegaPapel() {
+		this.opcionElegida = new Papel ();
+	}
+	
 
 	public int getNumeroDeJugador (){
 		return this.numeroDeJugador;

@@ -2,6 +2,9 @@ package skeleton;
 
 public abstract class Opcion {
 
-	//public abstract boolean leGanaA (Opcion opcion);
+	protected Opcion pierde;
+	protected Opcion gana;
 	
+	
+	public abstract boolean leGanaA(Opcion opcion);
 }
