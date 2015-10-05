@@ -14,6 +14,13 @@ public class StepDef {
 		
 		this.ahorcado = new Ahorcado (palabra);
 	}
+	
+	@Given("^me quedan (\\d+) vida$")
+	public void me_quedan_vida(int vidas) throws Throwable {
+	    
+		this.ahorcado.setVidas (vidas);
+	}
+
 
 	@When("^arriesgo \"(.*?)\"$")
 	public void arriesgo(String letra) throws Throwable {
@@ -29,5 +36,17 @@ public class StepDef {
 	public void me_quedan_vidas(int vidas) throws Throwable {
 	    Assert.assertEquals(vidas, this.ahorcado.vidas());
 	}
+
+	@Then("^resultado \"(.*?)\"$")
+	public void resultado (String resultado) throws Throwable {
+		Assert.assertEquals ( resultado, this.ahorcado.estadoJugador() );
+	}
+
+
+
+
+
+	
+	
 
 }

@@ -48,4 +48,12 @@ public class ReglaDeAhorcado {
 		return this.estadoDeAhorcado;
 	}
 
+	public String obtenerCondicionDelJugador(int vidas) {
+		
+		if (vidas == 0){
+			return "ahorcado";
+		}else {
+			return String.valueOf(vidas);
+		}
+	}
 }

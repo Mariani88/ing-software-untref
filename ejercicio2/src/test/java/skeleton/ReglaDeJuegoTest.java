@@ -31,7 +31,12 @@ public class ReglaDeJuegoTest {
 		Assert.assertEquals("*******", regla.aplicarAPalabra ("w") );
 	}
 	
-	
-	
-	
+	@Test
+	public void jugadorConCeroVidasDebeEstarAhorcado (){
+		
+		ReglaDeAhorcado regla = new ReglaDeAhorcado ("balanza");
+		int vidas = 0;
+		Assert.assertEquals("ahorcado", regla.obtenerCondicionDelJugador (vidas) );
+		
+	}
 }

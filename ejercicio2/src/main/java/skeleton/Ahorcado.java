@@ -35,4 +35,16 @@ public class Ahorcado {
 		
 		return this.vidas;
 	}
+	
+	
+	public String estadoJugador (){
+		
+		return this.regla.obtenerCondicionDelJugador (this.vidas);
+		
+	}
+	
+
+	public void setVidas(int vidas) {
+		this.vidas = vidas;		
+	}
 }

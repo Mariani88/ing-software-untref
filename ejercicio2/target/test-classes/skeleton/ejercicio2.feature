@@ -21,5 +21,15 @@ When arriesgo "x"
 Then estado es "****"
 And me quedan 6 vidas
 
+Scenario: usuario pierde el juego
+Given la palabra secreta es "auto" 
+And me quedan 1 vida
+When arriesgo "x"
+Then estado es "****"
+And resultado "ahorcado"
+
+
+
+
 
 
