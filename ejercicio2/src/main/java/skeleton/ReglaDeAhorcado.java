@@ -10,7 +10,6 @@ public class ReglaDeAhorcado {
 		this.palabra = palabra;
 		this.estadoDeAhorcado = "";
 	
-		
 		for (int i = 0; i < palabra.length(); i++){
 			this.estadoDeAhorcado = this.estadoDeAhorcado + "*";
 		}

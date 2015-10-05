@@ -12,9 +12,6 @@ public class Ahorcado {
 		this.estado = this.regla.getEstado();
 	}
 	
-	public Ahorcado (){
-	
-	}
 
 	public void arriesgar(String letra) {
 		
@@ -36,13 +33,9 @@ public class Ahorcado {
 		return this.vidas;
 	}
 	
-	
-	public String estadoJugador (){
-		
+	public String estadoJugador (){	
 		return this.regla.obtenerCondicionDelJugador (this.vidas);
-		
 	}
-	
 
 	public void setVidas(int vidas) {
 		this.vidas = vidas;		
@@ -52,6 +45,4 @@ public class Ahorcado {
 		this.estado = estado;
 		this.regla.setEstadoJugador (estado);
 	}
-
-	
 }
