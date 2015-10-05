@@ -12,11 +12,11 @@ public class ReglaDeAhorcado {
 		for (int i = 0; i < palabra.length(); i++){
 			this.estadoDeAhorcado = this.estadoDeAhorcado + "*";
 		}
-		
 	}
 
 	public String aplicarAPalabra(String letra) {
 		
+		letra = letra.toLowerCase();
 		int ultimaDeteccion = 0;
 		boolean terminado = false;
 		int inicioDeBusqueda = 0;
