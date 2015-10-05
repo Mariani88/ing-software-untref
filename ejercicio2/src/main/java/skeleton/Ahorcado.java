@@ -8,8 +8,8 @@ public class Ahorcado {
 	
 	public Ahorcado(String palabra) {
 		
-		this.estado = null;
 		this.regla = new ReglaDeAhorcado (palabra);
+		this.estado = this.regla.getEstado();
 	}
 	
 	public Ahorcado (){
@@ -17,8 +17,13 @@ public class Ahorcado {
 	}
 
 	public void arriesgar(String letra) {
+		
+		String viejoEstado = new String (this.estado);
 		this.estado = this.regla.aplicarAPalabra(letra);
 		
+		if ( this.estado.equals( viejoEstado )){
+			this.vidas--;
+		}
 	}
 
 	public String estado() {

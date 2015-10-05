@@ -4,10 +4,12 @@ public class ReglaDeAhorcado {
 
 	private String palabra;
 	private String estadoDeAhorcado;
+
 	
 	public ReglaDeAhorcado ( String palabra){
 		this.palabra = palabra;
 		this.estadoDeAhorcado = "";
+	
 		
 		for (int i = 0; i < palabra.length(); i++){
 			this.estadoDeAhorcado = this.estadoDeAhorcado + "*";
@@ -27,7 +29,7 @@ public class ReglaDeAhorcado {
 			inicioDeBusqueda = modificarInicioDeBusqueda(letra, ultimaDeteccion, inicioDeBusqueda);
 			terminado = (ultimaDeteccion == -1);
 		}
-
+		
 		return this.estadoDeAhorcado;
 	}
 
@@ -38,6 +40,12 @@ public class ReglaDeAhorcado {
 					+ this.estadoDeAhorcado.substring(ultimaDeteccion + 1);
 			inicioDeBusqueda = ultimaDeteccion + 1;
 		}
+		
 		return inicioDeBusqueda;
 	}
+	
+	public String getEstado (){
+		return this.estadoDeAhorcado;
+	}
+
 }
