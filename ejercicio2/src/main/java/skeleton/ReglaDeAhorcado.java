@@ -50,10 +50,17 @@ public class ReglaDeAhorcado {
 
 	public String obtenerCondicionDelJugador(int vidas) {
 		
-		if (vidas == 0){
-			return "ahorcado";
+		if (vidas > 0 && this.palabra.equals(this.estadoDeAhorcado)){
+			return "ganaste";
+		}else if (vidas == 0){
+			return "ahorcado"; 
 		}else {
 			return String.valueOf(vidas);
 		}
+	}
+
+	public void setEstadoJugador(String estado) {
+		this.estadoDeAhorcado = estado;
+		
 	}
 }

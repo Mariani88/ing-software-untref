@@ -47,4 +47,11 @@ public class Ahorcado {
 	public void setVidas(int vidas) {
 		this.vidas = vidas;		
 	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+		this.regla.setEstadoJugador (estado);
+	}
+
+	
 }

@@ -37,6 +37,15 @@ public class ReglaDeJuegoTest {
 		ReglaDeAhorcado regla = new ReglaDeAhorcado ("balanza");
 		int vidas = 0;
 		Assert.assertEquals("ahorcado", regla.obtenerCondicionDelJugador (vidas) );
+	}
+	
+	@Test
+	public void jugadorDebeGanarSiAcierta (){
 		
+		ReglaDeAhorcado regla = new ReglaDeAhorcado ("balanza");
+		String estado = "balanza";
+		regla.setEstadoJugador(estado);
+		int vidas = 1;
+		Assert.assertEquals("ganaste", regla.obtenerCondicionDelJugador (vidas) );
 	}
 }

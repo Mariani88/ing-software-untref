@@ -29,7 +29,12 @@ Then estado es "****"
 And resultado "ahorcado"
 
 
-
+Scenario: usuario gana el juego
+Given la palabra secreta es "auto" 
+And  tengo estado "au*o"
+When arriesgo "t"
+Then estado es "auto"
+And resultado "ganaste"
 
 
 

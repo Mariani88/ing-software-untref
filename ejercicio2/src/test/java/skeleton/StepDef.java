@@ -20,6 +20,12 @@ public class StepDef {
 	    
 		this.ahorcado.setVidas (vidas);
 	}
+	
+	@Given("^tengo estado \"(.*?)\"$")
+	public void tengo_estado(String estado) throws Throwable {
+	    
+		this.ahorcado.setEstado (estado);
+	}
 
 
 	@When("^arriesgo \"(.*?)\"$")
