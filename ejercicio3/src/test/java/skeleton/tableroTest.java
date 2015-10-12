@@ -25,7 +25,18 @@ public class tableroTest {
 		boolean agregado = tablero.agregar(new Destructor (), 0, 2, new Horizontal ());
 		
 		Assert.assertFalse(agregado);
-		
-		
 	}
+	
+	
+	/*@Test
+	public void agregarNoDebeAgregarBarcoSiPosicionIngresadaEstaMuyCercanaAOcupada (){
+		
+		Tablero tablero = new Tablero ();
+		tablero.agregar(new Destructor (), 0, 2, new Horizontal ());
+		
+		boolean agregado = tablero.agregar(new Destructor (), 0, 0, new Horizontal ());
+		
+		Assert.assertFalse(agregado);
+	}*/
+	
 }

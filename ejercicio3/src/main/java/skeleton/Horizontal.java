@@ -10,4 +10,10 @@ public class Horizontal extends Orientacion{
 			matrizTablero [fila][j] = barco;
 		}	
 	}
+
+	@Override
+	public boolean zonaDisponiblePara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

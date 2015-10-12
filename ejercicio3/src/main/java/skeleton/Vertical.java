@@ -11,4 +11,19 @@ public class Vertical extends Orientacion {
 			matrizTablero [i][columna] = barco;
 		}
 	}
+
+	@Override
+	public boolean zonaDisponiblePara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
+		
+		boolean disponible = true;
+		int i = 0;
+		
+		while (disponible && i < barco.getTamanio() ){
+			
+			disponible = matrizTablero [fila + i][columna] == null;
+			i++;
+		}
+		
+		return disponible;
+	}
 }
