@@ -30,6 +30,15 @@ public class Vertical extends Orientacion {
 	@Override
 	public boolean validarZonaDeUbicacionPara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
 	
-		return true;
+		boolean zonaValida = columna < matrizTablero[fila].length;
+		int i = 0;
+		
+		while (zonaValida && i < barco.getTamanio()){
+			
+			zonaValida = fila + i < matrizTablero.length; 
+			i++;
+		}
+		
+		return zonaValida;
 	}
 }

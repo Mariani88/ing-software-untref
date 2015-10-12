@@ -75,6 +75,19 @@ public class HorizontalTest {
 	}
 	
 	
+	@Test
+	public void validarZonaDeUbicacionDebeDevolverFalseSiFilaInvalida() {
+
+		boolean zonaValida = true;
+		int fila = 4;
+		int columna = 3;
+		zonaValida = this.horizontal.validarZonaDeUbicacionPara(new Destructor(), this.matrizTablero, fila, columna);
+
+		Assert.assertFalse(zonaValida);
+	}
+	
+	
+	
 	private void assertarNullDesde(int fila, int columna) {
 
 		for (int j = columna; j < this.matrizTablero[fila].length; j++) {

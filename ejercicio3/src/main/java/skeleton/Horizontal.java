@@ -29,7 +29,7 @@ public class Horizontal extends Orientacion{
 	@Override
 	public boolean validarZonaDeUbicacionPara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
 		
-		boolean zonaValida = true;
+		boolean zonaValida = fila < matrizTablero.length;
 		int i = 0;
 		
 		while (zonaValida && i < barco.getTamanio()){

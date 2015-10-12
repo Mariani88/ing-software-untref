@@ -64,6 +64,30 @@ public class VerticalTest {
 		Assert.assertFalse(zonaDisponible);
 	}
 
+	@Test
+	public void validarZonaDeUbicacionDebeDevolverSiLaZonaPerteneceAlTablero() {
+
+		boolean zonaValida = true;
+		int fila = 3;
+		int columna = 0;
+		zonaValida = this.vertical.validarZonaDeUbicacionPara(new Destructor(), this.matrizTablero, fila, columna);
+
+		Assert.assertFalse(zonaValida);
+	}
+	
+	@Test
+	public void validarZonaDeUbicacionDebeDevolverFalseSiColumnaInvalida() {
+
+		boolean zonaValida = true;
+		int fila = 3;
+		int columna = 4;
+		zonaValida = this.vertical.validarZonaDeUbicacionPara(new Destructor(), this.matrizTablero, fila, columna);
+
+		Assert.assertFalse(zonaValida);
+	}
+	
+	
+	
 	private void assertarNullDesde(int fila, int columna) {
 
 		for (int i = fila; i < this.matrizTablero[fila].length; i++) {
