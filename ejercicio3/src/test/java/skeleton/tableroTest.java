@@ -28,7 +28,7 @@ public class tableroTest {
 	}
 	
 	
-	/*@Test
+	@Test
 	public void agregarNoDebeAgregarBarcoSiPosicionIngresadaEstaMuyCercanaAOcupada (){
 		
 		Tablero tablero = new Tablero ();
@@ -37,6 +37,6 @@ public class tableroTest {
 		boolean agregado = tablero.agregar(new Destructor (), 0, 0, new Horizontal ());
 		
 		Assert.assertFalse(agregado);
-	}*/
+	}
 	
 }

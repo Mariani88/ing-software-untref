@@ -13,17 +13,16 @@ public class Tablero {
 	}
 	
 	public boolean agregar(Barco barco, int fila, int columna, Orientacion orientacion) {
-	
+
 		boolean agregado = false;
-		
-		boolean puedeAgregarse = this.matrizTablero[fila][columna] == null;
-		
-		if (puedeAgregarse){
+
+		boolean puedeAgregarse = orientacion.zonaDisponiblePara(barco, this.matrizTablero, fila, columna);
+
+		if (puedeAgregarse) {
 			orientacion.ubica(barco, this.matrizTablero, fila, columna);
 			agregado = true;
 		}
-		
-		
+
 		return agregado;
 	}
 
