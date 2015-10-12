@@ -1,4 +1,4 @@
-Feature: agregar
+Feature: agregar barco
 
 Background: existe un destructor en tablero del jugador 
 Given jugador tiene un barco en la posicion 0 2 HORIZONTALMENTE 

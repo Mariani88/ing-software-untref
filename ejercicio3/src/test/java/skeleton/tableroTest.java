@@ -14,8 +14,5 @@ public class tableroTest {
 		
 		boolean agregado = tablero.agregar(new Destructor (), 0, 0, new Vertical ());
 		Assert.assertTrue(agregado);
-	}
-	
-	
-	
+	}	
 }

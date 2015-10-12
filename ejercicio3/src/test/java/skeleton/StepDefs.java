@@ -16,14 +16,14 @@ public class StepDefs {
 		this.batalla.jugadorUnoAgrega (new Destructor(), fila, columna, new Horizontal ());
 	}
 
-	/*@When("^jugador agrega un destructor en posicion (\\d+) (\\d+) VERTICALMENTE$")
+	@When("^jugador agrega un destructor en posicion (\\d+) (\\d+) VERTICALMENTE$")
 	public void jugador_agrega_un_destructor_en_posicion_VERTICALMENTE(int fila, int columna) throws Throwable {
 		this.mensaje = this.batalla.jugadorUnoAgrega(new Destructor(), fila, columna, new Vertical ());
 	}
 
 	@Then("^jugador obtiene \"(.*?)\"$")
-	public void jugador_obtiene(String arg1) throws Throwable {
-		String mensajeEsperado = "agregado";
-		Assert.assertEquals(mensajeEsperado, this.mensaje);
-	}*/
+	public void jugador_obtiene(String mensaje) throws Throwable {
+		
+		Assert.assertEquals(mensaje, this.mensaje);
+	}
 }
