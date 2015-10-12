@@ -26,4 +26,10 @@ public class Vertical extends Orientacion {
 		
 		return disponible;
 	}
+
+	@Override
+	public boolean validarZonaDeUbicacionPara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
+	
+		return true;
+	}
 }

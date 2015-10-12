@@ -25,4 +25,19 @@ public class Horizontal extends Orientacion{
 		
 		return disponible;
 	}
+
+	@Override
+	public boolean validarZonaDeUbicacionPara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
+		
+		boolean zonaValida = true;
+		int i = 0;
+		
+		while (zonaValida && i < barco.getTamanio()){
+			
+			zonaValida = (columna + i) < matrizTablero[fila].length;
+			i++;
+		}
+		
+		return zonaValida;
+	}
 }
