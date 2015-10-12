@@ -12,5 +12,7 @@ Scenario: jugador ubica un barco en una posición ya ocupada
 When jugador agrega un destructor en posicion 0 2 HORIZONTALMENTE
 Then jugador obtiene "posicion ocupada"
 
-
+Scenario: jugador ubica un barco en una posición fuera del tablero
+When jugador agrega un destructor en posicion 10 2 HORIZONTALMENTE
+Then jugador obtiene "posicion invalida para ubicar barco"
 

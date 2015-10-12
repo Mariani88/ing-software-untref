@@ -51,4 +51,21 @@ public class tableroTest {
 		Assert.assertFalse(agregado);
 	}
 	
+	
+	@Test
+	public void entraEnZonaValidaDebeDevolverSiUnBarcoEntraEnTablero (){
+		
+		Tablero tablero = new Tablero ();
+		int fila = 9;
+		int columna = 0;
+		boolean entra = tablero.entraEnZonaValida(new Destructor (), fila, columna, new Vertical ());
+		Assert.assertFalse(entra);
+		
+		entra = tablero.entraEnZonaValida(new Destructor (), fila, columna, new Horizontal ());
+		Assert.assertTrue(entra);
+	}
+	
+	
+	
+	
 }
