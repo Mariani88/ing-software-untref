@@ -26,4 +26,12 @@ public class StepDefs {
 		
 		Assert.assertEquals(mensaje, this.mensaje);
 	}
+	
+	
+	@When("^jugador agrega un destructor en posicion (\\d+) (\\d+) HORIZONTALMENTE$")
+	public void jugador_agrega_un_destructor_en_posicion_HORIZONTALMENTE(int fila, int columna) throws Throwable {
+	    
+		this.mensaje = this.batalla.jugadorUnoAgrega(new Destructor (), fila, columna, new Horizontal ());
+		
+	}
 }

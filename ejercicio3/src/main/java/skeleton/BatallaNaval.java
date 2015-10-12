@@ -8,9 +8,6 @@ public class BatallaNaval {
 	public BatallaNaval (){
 		
 		this.tableroJugador = new Tablero ();
-		
-		
-		
 	}
 	
 	
@@ -22,6 +19,8 @@ public class BatallaNaval {
 		
 		if (agregado){
 			mensaje = "barco agregado";
+		}else{
+			mensaje = "posicion ocupada";
 		}
 		
 		return mensaje;
