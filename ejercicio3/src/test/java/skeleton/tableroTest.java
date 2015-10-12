@@ -39,4 +39,16 @@ public class tableroTest {
 		Assert.assertFalse(agregado);
 	}
 	
+	
+	@Test
+	public void agregarNoDebeAgregarBarcoVerticalmenteSiPosicionIngresadaEstaMuyCercanaAOcupada (){
+		
+		Tablero tablero = new Tablero ();
+		tablero.agregar(new Destructor (), 2, 0, new Vertical ());
+		
+		boolean agregado = tablero.agregar(new Destructor (), 0, 0, new Vertical ());
+		
+		Assert.assertFalse(agregado);
+	}
+	
 }
