@@ -39,8 +39,25 @@ public class VerticalTest {
 		this.vertical.ubica (lancha, this.matrizTablero, fila, columna);
 		
 		Assert.assertEquals(lancha, this.matrizTablero[0][0]);
-		this.assertarNullDesde(1, 1);
+		this.assertarNullDesde(1, 0);
 	}
+	
+	@Test
+	public void ubicarBarcoDebeUbicarAcorazadoVerticalmente (){
+		
+		int fila = 0;
+		int columna = 0;	
+		this.inicializarMatrizTablero (this.matrizTablero);
+		Barco acorazado = new Acorazado ();
+		
+		this.vertical.ubica (acorazado, this.matrizTablero, fila, columna);
+		
+		Assert.assertEquals(acorazado, this.matrizTablero[0][0]);
+		Assert.assertEquals(acorazado, this.matrizTablero[1][0]);
+		this.assertarNullDesde(2, 0);
+	}
+	
+	
 	
 	
 	private void assertarNullDesde(int fila, int columna) {
@@ -61,11 +78,4 @@ public class VerticalTest {
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
 }
