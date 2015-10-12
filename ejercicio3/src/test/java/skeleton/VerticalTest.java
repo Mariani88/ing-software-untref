@@ -10,13 +10,14 @@ public class VerticalTest {
 	
 	private Orientacion vertical = new Vertical ();
 	private Barco [][] matrizTablero = new Barco [4][4]; 
+	private CampoDeBatalla campo = new CampoDeBatalla ();
 	
 	@Test
 	public void ubicarBarcoDebeColocarDestructorEnTableroVerticalmente (){
 		
 		int fila = 0;
 		int columna = 0;	
-		this.inicializarMatrizTablero (this.matrizTablero);
+		this.campo.construirLugarDeCombate(this.matrizTablero);
 		Barco destructor = new Destructor ();
 		
 		this.vertical.ubica (destructor, this.matrizTablero, fila, columna);
@@ -33,7 +34,7 @@ public class VerticalTest {
 		
 		int fila = 0;
 		int columna = 0;	
-		this.inicializarMatrizTablero (this.matrizTablero);
+		this.campo.construirLugarDeCombate(this.matrizTablero);
 		Barco lancha = new Lancha ();
 		
 		this.vertical.ubica (lancha, this.matrizTablero, fila, columna);
@@ -47,7 +48,7 @@ public class VerticalTest {
 		
 		int fila = 0;
 		int columna = 0;	
-		this.inicializarMatrizTablero (this.matrizTablero);
+		this.campo.construirLugarDeCombate(this.matrizTablero);
 		Barco acorazado = new Acorazado ();
 		
 		this.vertical.ubica (acorazado, this.matrizTablero, fila, columna);
@@ -57,10 +58,11 @@ public class VerticalTest {
 		this.assertarNullDesde(2, 0);
 	}
 	
-	
-	
-	
 	private void assertarNullDesde(int fila, int columna) {
+		
+		for ( int i = fila; i < this.matrizTablero[fila].length; i++){
+			Assert.assertNull(this.matrizTablero[i][columna]);
+		}
 		
 		for (int j = columna; j < this.matrizTablero[fila].length ;j++){
 			for (int i = fila; i < this.matrizTablero.length; i++){
@@ -68,14 +70,5 @@ public class VerticalTest {
 			}
 		}
 	}
-	
 
-	private void inicializarMatrizTablero(Barco[][] matrizTablero) {
-		
-		for (int i = 0; i < 4; i++){
-			for (int j = 0; j < 4; j++){		
-				matrizTablero [i][j] = null;
-			}
-		}
-	}
 }
