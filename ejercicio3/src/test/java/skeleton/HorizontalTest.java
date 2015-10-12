@@ -50,6 +50,17 @@ public class HorizontalTest {
 		Assert.assertEquals(lancha, this.matrizTablero[0][0]);
 		this.assertarNullDesde(0, 1);
 	}
+	
+	
+	@Test
+	public void zonaDisponibleParaDebeDevolverSiLaZonaEstaDisponibleParaUbicarBarco() {
+
+		this.matrizTablero[0][2] = new Lancha();
+
+		boolean zonaDisponible = true;
+		zonaDisponible = this.horizontal.zonaDisponiblePara(new Destructor(), this.matrizTablero, 0, 0);
+		Assert.assertFalse(zonaDisponible);
+	}
 
 	private void assertarNullDesde(int fila, int columna) {
 

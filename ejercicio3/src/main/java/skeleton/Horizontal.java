@@ -13,7 +13,16 @@ public class Horizontal extends Orientacion{
 
 	@Override
 	public boolean zonaDisponiblePara(Barco barco, Barco[][] matrizTablero, int fila, int columna) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		boolean disponible = true;
+		int i = 0;
+		
+		while (disponible && i < barco.getTamanio() ){
+			
+			disponible = matrizTablero [fila][columna + i] == null;
+			i++;
+		}
+		
+		return disponible;
 	}
 }
