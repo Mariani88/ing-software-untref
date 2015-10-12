@@ -3,12 +3,12 @@ package skeleton;
 public class BatallaNaval {
 
 	private Tablero tableroJugador;
-	private Tablero tableroAdversario;
+
 	
 	public BatallaNaval (){
 		
 		this.tableroJugador = new Tablero ();
-		this.tableroAdversario = new Tablero ();
+		
 		
 		
 	}
