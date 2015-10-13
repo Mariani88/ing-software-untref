@@ -54,7 +54,7 @@ public class BatallaNaval {
 	}
 
 	public String atacarAJugadorDosEn(int fila, int columna) {
-		
-		return this.tableroJugadorDos.buscarBlancoEn (fila, columna);
+
+		return this.tableroJugadorDos.buscarBlancoEn(fila, columna);
 	}
 }

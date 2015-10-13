@@ -1,12 +1,11 @@
 package skeleton;
 
-public class Destructor extends Barco{
+public class Destructor extends Barco {
 
-	
-	public Destructor (){
-		
+	public Destructor() {
+
 		super.tamanio = 3;
 		super.vida = 3;
-		
+
 	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="0" name="skeleton.RunCukesTest" time="1.06" errors="0" skipped="0">
+<testsuite tests="32" failures="0" name="skeleton.RunCukesTest" time="0.8" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/i386"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3"/>
+    <property name="user.dir" value="/home/matias/Descargas/git/ing-software-untref/ejercicio3"/>
     <property name="java.runtime.version" value="1.8.0_60-b27"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
@@ -67,14 +67,28 @@
   <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n ya ocupada" name="When jugador agrega un destructor en posicion 0 2 HORIZONTALMENTE" time="0"/>
   <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n ya ocupada" name="Then jugador obtiene \&quot;posicion ocupada\&quot;" time="0"/>
   <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n ya ocupada" name="Scenario: jugador ubica un barco en una posici\u00F3n ya ocupada" time="0"/>
-  <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" name="Given jugador tiene un barco en la posicion 0 2 HORIZONTALMENTE" time="0.001"/>
-  <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" name="When jugador agrega un destructor en posicion 10 2 HORIZONTALMENTE" time="0.009"/>
+  <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" name="Given jugador tiene un barco en la posicion 0 2 HORIZONTALMENTE" time="0"/>
+  <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" name="When jugador agrega un destructor en posicion 10 2 HORIZONTALMENTE" time="0"/>
   <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" name="Then jugador obtiene \&quot;posicion invalida para ubicar barco\&quot;" time="0"/>
   <testcase classname="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" name="Scenario: jugador ubica un barco en una posici\u00F3n fuera del tablero" time="0"/>
   <testcase classname="Scenario: Disparo y toco agua" name="Given jugador tiene un destructor en la posicion 0 0 HORIZONTALMENTE" time="0"/>
-  <testcase classname="Scenario: Disparo y toco agua" name="And jugador tiene un destructor en la posicion 1 0 VERTICALMENTE" time="0"/>
-  <testcase classname="Scenario: Disparo y toco agua" name="And jugador tiene un acorazado en la posicion 1 3 HORIZONTALMENTE" time="0.001"/>
-  <testcase classname="Scenario: Disparo y toco agua" name="When jugador dispara a la posicion 1 1" time="0.002"/>
-  <testcase classname="Scenario: Disparo y toco agua" name="Then jugador luego de disparar obtiene \&quot;toco agua\&quot;" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco agua" name="And jugador tiene un destructor en la posicion 1 0 VERTICALMENTE" time="0.002"/>
+  <testcase classname="Scenario: Disparo y toco agua" name="And jugador tiene un acorazado en la posicion 1 3 HORIZONTALMENTE" time="0"/>
+  <testcase classname="Scenario: Disparo y toco agua" name="When jugador dispara a la posicion 1 1" time="0"/>
+  <testcase classname="Scenario: Disparo y toco agua" name="Then jugador luego de disparar obtiene \&quot;toco agua\&quot;" time="0"/>
   <testcase classname="Scenario: Disparo y toco agua" name="Scenario: Disparo y toco agua" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco pero no lo hundo" name="Given jugador tiene un destructor en la posicion 0 0 HORIZONTALMENTE" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco pero no lo hundo" name="And jugador tiene un destructor en la posicion 1 0 VERTICALMENTE" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco pero no lo hundo" name="And jugador tiene un acorazado en la posicion 1 3 HORIZONTALMENTE" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco pero no lo hundo" name="When jugador dispara a la posicion 0 0" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco pero no lo hundo" name="Then jugador luego de disparar obtiene \&quot;barco averiado\&quot;" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco pero no lo hundo" name="Scenario: Disparo y toco un barco pero no lo hundo" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="Given jugador tiene un destructor en la posicion 0 0 HORIZONTALMENTE" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="And jugador tiene un destructor en la posicion 1 0 VERTICALMENTE" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="And jugador tiene un acorazado en la posicion 1 3 HORIZONTALMENTE" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="When jugador dispara a la posicion 0 0" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="And jugador dispara a la posicion 0 1" time="0"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="And jugador dispara a la posicion 0 2" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="Then jugador luego de disparar obtiene \&quot;barco hundido\&quot;" time="0.001"/>
+  <testcase classname="Scenario: Disparo y toco un barco y lo hundo" name="Scenario: Disparo y toco un barco y lo hundo" time="0.001"/>
 </testsuite>

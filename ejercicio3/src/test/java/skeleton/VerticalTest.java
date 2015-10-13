@@ -74,7 +74,7 @@ public class VerticalTest {
 
 		Assert.assertFalse(zonaValida);
 	}
-	
+
 	@Test
 	public void validarZonaDeUbicacionDebeDevolverFalseSiColumnaInvalida() {
 
@@ -85,9 +85,7 @@ public class VerticalTest {
 
 		Assert.assertFalse(zonaValida);
 	}
-	
-	
-	
+
 	private void assertarNullDesde(int fila, int columna) {
 
 		for (int i = fila; i < this.matrizTablero[fila].length; i++) {

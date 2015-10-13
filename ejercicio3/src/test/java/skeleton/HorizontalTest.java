@@ -50,8 +50,7 @@ public class HorizontalTest {
 		Assert.assertEquals(lancha, this.matrizTablero[0][0]);
 		this.assertarNullDesde(0, 1);
 	}
-	
-	
+
 	@Test
 	public void zonaDisponibleParaDebeDevolverSiLaZonaEstaDisponibleParaUbicarBarco() {
 
@@ -62,7 +61,6 @@ public class HorizontalTest {
 		Assert.assertFalse(zonaDisponible);
 	}
 
-	
 	@Test
 	public void validarZonaDeUbicacionDebeDevolverSiLaZonaPerteneceAlTablero() {
 
@@ -73,8 +71,7 @@ public class HorizontalTest {
 
 		Assert.assertFalse(zonaValida);
 	}
-	
-	
+
 	@Test
 	public void validarZonaDeUbicacionDebeDevolverFalseSiFilaInvalida() {
 
@@ -85,9 +82,7 @@ public class HorizontalTest {
 
 		Assert.assertFalse(zonaValida);
 	}
-	
-	
-	
+
 	private void assertarNullDesde(int fila, int columna) {
 
 		for (int j = columna; j < this.matrizTablero[fila].length; j++) {

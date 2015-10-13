@@ -1,10 +1,10 @@
 package skeleton;
 
-public class Lancha extends Barco{
+public class Lancha extends Barco {
 
-	public Lancha (){
+	public Lancha() {
 		super.tamanio = 1;
 		super.vida = 1;
 	}
-	
+
 }
