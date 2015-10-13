@@ -16,9 +16,9 @@ public class Tablero {
 
 		boolean agregado = false;
 
-		boolean puedeAgregarse = orientacion.zonaDisponiblePara(barco, this.matrizTablero, fila, columna);
+		boolean zonaLibre = orientacion.zonaDisponiblePara(barco, this.matrizTablero, fila, columna);
 
-		if (puedeAgregarse) {
+		if (zonaLibre) {
 			orientacion.ubica(barco, this.matrizTablero, fila, columna);
 			agregado = true;
 		}
@@ -29,6 +29,17 @@ public class Tablero {
 	public boolean entraEnZonaValida(Barco barco, int fila, int columna, Orientacion orientacion) {
 
 		return orientacion.validarZonaDeUbicacionPara(barco, this.matrizTablero, fila, columna);
+	}
+
+	public String buscarBlancoEn(int fila, int columna) {
+		
+		String mensaje = null;
+		
+		if (this.matrizTablero [fila][columna] == null){
+			mensaje = "toco agua";
+		}
+		
+		return mensaje;
 	}
 
 }
