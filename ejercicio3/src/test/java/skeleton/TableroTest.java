@@ -80,6 +80,17 @@ public class TableroTest {
 		Assert.assertEquals("toco agua" , mensajePostDisparo);
 	}
 	
-	
-	
+	@Test
+	public void buscarBlancoEnDebeDevolverAveriadoSiGolpeaBarco (){
+		
+		Tablero tablero = new Tablero ();
+		int fila = 0;
+		int columna = 0;
+		tablero.agregar(new Destructor (), fila, columna, new Horizontal ());
+		
+		String mensajePostDisparo = tablero.buscarBlancoEn(fila, columna);
+		Assert.assertEquals("barco averiado" , mensajePostDisparo);
+		
+		
+	}
 }

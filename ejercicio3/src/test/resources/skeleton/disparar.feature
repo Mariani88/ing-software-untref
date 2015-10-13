@@ -8,3 +8,8 @@ And jugador tiene un acorazado en la posicion 1 3 HORIZONTALMENTE
 Scenario: Disparo y toco agua
 When jugador dispara a la posicion 1 1
 Then jugador luego de disparar obtiene "toco agua"
+
+
+Scenario: Disparo y toco un barco pero no lo hundo
+When jugador dispara a la posicion 0 0
+Then jugador luego de disparar obtiene "barco averiado"

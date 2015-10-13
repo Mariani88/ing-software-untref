@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="skeleton.TableroTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="skeleton.TableroTest" time="0.013" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/i386"/>
@@ -59,10 +59,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="skeleton.TableroTest" name="agregarNoDebeAgregarBarcoSiPosicionIngresadaEstaMuyCercanaAOcupada" time="0.006"/>
+  <testcase classname="skeleton.TableroTest" name="agregarNoDebeAgregarBarcoSiPosicionIngresadaEstaMuyCercanaAOcupada" time="0.001"/>
   <testcase classname="skeleton.TableroTest" name="agregarNoDebeAgregarBarcoVerticalmenteSiPosicionIngresadaEstaMuyCercanaAOcupada" time="0"/>
   <testcase classname="skeleton.TableroTest" name="agregarNoDebeAgregarBarcoSiPosicionIngresadaEstaOcupada" time="0"/>
+  <testcase classname="skeleton.TableroTest" name="buscarBlancoEnDebeDevolverAveriadoSiGolpeaBarco" time="0"/>
   <testcase classname="skeleton.TableroTest" name="agregarDebeDevolverTrueSiAgregaBarco" time="0"/>
   <testcase classname="skeleton.TableroTest" name="entraEnZonaValidaDebeDevolverSiUnBarcoEntraEnTablero" time="0"/>
-  <testcase classname="skeleton.TableroTest" name="buscarBlancoEnDebeDevolverTocoAguaSiNoHayBarco" time="0.002"/>
+  <testcase classname="skeleton.TableroTest" name="buscarBlancoEnDebeDevolverTocoAguaSiNoHayBarco" time="0"/>
 </testsuite>

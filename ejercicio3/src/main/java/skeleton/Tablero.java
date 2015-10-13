@@ -37,6 +37,8 @@ public class Tablero {
 		
 		if (this.matrizTablero [fila][columna] == null){
 			mensaje = "toco agua";
+		}else{
+			mensaje = "barco averiado";
 		}
 		
 		return mensaje;
