@@ -90,7 +90,42 @@ public class TableroTest {
 		
 		String mensajePostDisparo = tablero.buscarBlancoEn(fila, columna);
 		Assert.assertEquals("barco averiado" , mensajePostDisparo);
-		
-		
 	}
+	
+	@Test
+	public void buscarBlancoEnDebeDevolverHundidoSiAcaboConElBarco (){
+		
+		Tablero tablero = new Tablero ();
+		int fila = 0;
+		int columna = 0;
+		tablero.agregar(new Destructor (), fila, columna, new Horizontal ());
+		
+		String mensajePostDisparo;
+		assertearHundimiento(tablero, fila, columna);
+	}
+	
+	@Test
+	public void buscarBlancoEnDebeDevolverHundidoYAveriadoSiHundioSoloUnoYDanioOtro (){
+		
+		Tablero tablero = new Tablero ();
+		int fila = 0;
+		int columna = 0;
+		int filaDos = 1;
+		int columnaDos = 0;
+		
+		tablero.agregar(new Destructor (), fila, columna, new Horizontal ());
+		tablero.agregar(new Destructor (), filaDos, columnaDos, new Vertical ());
+		
+		assertearHundimiento(tablero, fila, columna);
+		Assert.assertEquals("toco agua", tablero.buscarBlancoEn(fila, columna + 1));
+		Assert.assertEquals( "barco averiado",tablero.buscarBlancoEn(filaDos, columnaDos));
+	}
+
+	private void assertearHundimiento(Tablero tablero, int fila, int columna) {
+		tablero.buscarBlancoEn(fila, columna + 2);
+		tablero.buscarBlancoEn(fila, columna);
+		String mensajePostDisparo = tablero.buscarBlancoEn(fila, columna + 1);
+		Assert.assertEquals("barco hundido" , mensajePostDisparo);
+	}
+	
 }

@@ -38,9 +38,23 @@ public class Tablero {
 		if (this.matrizTablero [fila][columna] == null){
 			mensaje = "toco agua";
 		}else{
-			mensaje = "barco averiado";
+			mensaje = daniarBarco(fila, columna);
 		}
 		
+		return mensaje;
+	}
+
+	private String daniarBarco(int fila, int columna) {
+		String mensaje;
+		Barco barco = this.matrizTablero [fila][columna];
+		barco.reducirVida();
+		this.matrizTablero [fila][columna] = null;
+		
+		if (barco.getVida() == 0){
+			mensaje = "barco hundido";
+		}else{
+			mensaje = "barco averiado";
+		}
 		return mensaje;
 	}
 }

@@ -13,3 +13,9 @@ Then jugador luego de disparar obtiene "toco agua"
 Scenario: Disparo y toco un barco pero no lo hundo
 When jugador dispara a la posicion 0 0
 Then jugador luego de disparar obtiene "barco averiado"
+
+Scenario: Disparo y toco un barco y lo hundo
+When jugador dispara a la posicion 0 0
+And jugador dispara a la posicion 0 1
+And jugador dispara a la posicion 0 2
+Then jugador luego de disparar obtiene "barco hundido"
