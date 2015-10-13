@@ -43,5 +43,4 @@ public class Tablero {
 		
 		return mensaje;
 	}
-
 }
