@@ -1,10 +1,7 @@
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/StepDefsDisparar.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/CampoDeBatallaTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/AcorazadoTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/TableroTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/LanchaTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/HorizontalTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/StepDefsAgregarBarco.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/RunCukesTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/DestructorTest.java
-/home/matias/Descargas/git/ing-software-untref/ejercicio3/src/test/java/skeleton/VerticalTest.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/VerticalTest.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/RunCukesTest.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/HorizontalTest.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/TableroTest.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/StepDefsDisparar.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/CampoDeBatallaTest.java
+/media/matias/Datos/Facultad/Ingenieria del software/tps/ejercicio3/src/test/java/skeleton/StepDefsAgregarBarco.java
