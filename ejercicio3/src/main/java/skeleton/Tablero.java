@@ -32,29 +32,52 @@ public class Tablero {
 	}
 
 	public String buscarBlancoEn(int fila, int columna) {
+		
+		String mensaje = "posicion invalida";
+		boolean posicionValida = this.validarPosicionDeTiro(fila, columna, mensaje);
 
-		String mensaje = null;
-
-		if (this.matrizTablero[fila][columna] == null) {
-			mensaje = "toco agua";
-		} else {
-			mensaje = daniarBarco(fila, columna);
+		if (posicionValida) {
+			mensaje = buscarObjetivo(fila, columna);
 		}
 
 		return mensaje;
 	}
 
-	private String daniarBarco(int fila, int columna) {
+	private String buscarObjetivo(int fila, int columna) {
+	
 		String mensaje;
+		if (this.matrizTablero[fila][columna] == null) {
+			mensaje = "toco agua";
+		} else {
+			mensaje = daniarBarco(fila, columna);
+		}
+		
+		return mensaje;
+	}
+
+	private boolean validarPosicionDeTiro(int fila, int columna, String mensaje) {
+
+		boolean filaValida = fila < this.matrizTablero.length;
+		boolean columnaValida = false;
+		
+		if (filaValida){
+			columnaValida = columna < this.matrizTablero[fila].length;
+		}
+
+		return filaValida && columnaValida;
+	}
+
+	private String daniarBarco(int fila, int columna) {
+		
+		String mensaje = "barco averiado";
 		Barco barco = this.matrizTablero[fila][columna];
 		barco.reducirVida();
 		this.matrizTablero[fila][columna] = null;
 
 		if (barco.getVida() == 0) {
 			mensaje = "barco hundido";
-		} else {
-			mensaje = "barco averiado";
 		}
+		
 		return mensaje;
 	}
 }

@@ -19,3 +19,9 @@ When jugador dispara a la posicion 0 0
 And jugador dispara a la posicion 0 1
 And jugador dispara a la posicion 0 2
 Then jugador luego de disparar obtiene "barco hundido"
+
+Scenario: Disparo a una posicion invalida
+When jugador dispara a la posicion 10 0
+Then jugador luego de disparar obtiene "posicion invalida"
+
+
