@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: truco.RunCukesTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.018 sec
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.005 sec
