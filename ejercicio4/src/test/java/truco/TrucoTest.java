@@ -29,9 +29,9 @@ public class TrucoTest {
 		this.resultadoEnvido = truco.obtenerEnvidoDe (this.cartas);	
 	}
 
-	/*@Then("^el envido es (\\d+)$")
+	@Then("^el envido es (\\d+)$")
 	public void el_envido_es(int envido) throws Throwable {
 		
 	   Assert.assertEquals( envido, this.resultadoEnvido);
-	}*/
+	}
 }
