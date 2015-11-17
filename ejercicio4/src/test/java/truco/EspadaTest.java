@@ -10,13 +10,27 @@ public class EspadaTest {
 	@Test
 	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaEspada (){
 		
-		Espada espada = new Espada ();
-		int numeroDeCarta1 = 7;
-		int envidoEsperado = numeroDeCarta1;
+		Palo espada = new Espada ();
+		int aporteDeCarta1 = 7;
+		int envidoEsperado = aporteDeCarta1;
 		
-		int envidoAcumulado = espada.acumularEnvido ( numeroDeCarta1 );
+		int envidoAcumulado = espada.acumularEnvido ( aporteDeCarta1 );
 		Assert.assertEquals(envidoEsperado, envidoAcumulado);
-		
-		
 	}
+	
+	
+	@Test
+	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaEspadaConDosCartas (){
+		
+		Palo espada = new Espada ();
+		int aporteDeCarta1 = 7;
+		int aporteDeCarta2 = 6; 
+		int envidoEsperado = aporteDeCarta1 + aporteDeCarta2 + 20;
+		
+		int envidoAcumulado = espada.acumularEnvido ( aporteDeCarta1 );
+		envidoAcumulado = espada.acumularEnvido ( aporteDeCarta2 );
+		
+		Assert.assertEquals(envidoEsperado, envidoAcumulado);
+	}
+	
 }
