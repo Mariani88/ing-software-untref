@@ -28,8 +28,9 @@ public class TrucoTest {
 		Palo oro = new Oro();
 
 		this.cartas.add(new Carta(cartaOro2, oro));
-		this.cartas.add(new Carta(cartaCopa, copa));
 		this.cartas.add(new Carta(cartaOro1, oro));
+		this.cartas.add(new Carta(cartaCopa, copa));
+		
 	}
 
 	@Given("^el jugador tiene (\\d+) de oro, (\\d+) de oro y (\\d+) de oro$")

@@ -8,12 +8,23 @@ public class Truco {
 	public int obtenerEnvidoDe(List<Carta> cartas) {
 
 		int envido = 0;
+		int envidoDePalo = 0;
 		Iterator<Carta> iterador = cartas.iterator();
 
 		while (iterador.hasNext()) {
-			envido = iterador.next().contribuirAlEnvido();
+			envidoDePalo = iterador.next().contribuirAlEnvido();			
+			envido = evaluarEnvidos (envido, envidoDePalo);
 		}
 
+		return envido;
+	}
+
+	private int evaluarEnvidos(int envido, int envidoDePalo) {
+		
+		if (envido < envidoDePalo){
+			envido = envidoDePalo;
+		}
+		
 		return envido;
 	}
 }
