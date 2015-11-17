@@ -21,6 +21,20 @@ public class TrucoTest {
 		this.cartas.add(new Carta (numero3, new Oro ()) );
 		
 	}
+	
+	
+	@Given("^el jugador tiene (\\d+) de copa, (\\d+) de oro y (\\d+) de oro$")
+	public void el_jugador_tiene_de_copa_de_oro_y_de_oro(int cartaCopa, int cartaOro1, int cartaOro2) throws Throwable {
+	    
+		Palo copa = new Copa ();
+		Palo oro = new Oro ();
+		
+		this.cartas.add(new Carta (cartaOro2, oro) );
+		this.cartas.add(new Carta (cartaCopa, copa) );
+		this.cartas.add(new Carta (cartaOro1, oro) );
+	}
+
+	
 
 	@When("^el jugador canta envido$")
 	public void el_jugador_canta_envido() throws Throwable {
