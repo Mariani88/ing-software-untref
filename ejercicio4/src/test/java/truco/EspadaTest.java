@@ -8,7 +8,7 @@ import org.junit.Test;
 public class EspadaTest {
 	
 	@Test
-	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaEspada (){
+	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaUnaCarta (){
 		
 		Palo espada = new Espada ();
 		int aporteDeCarta1 = 7;
@@ -20,7 +20,7 @@ public class EspadaTest {
 	
 	
 	@Test
-	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaEspadaConDosCartas (){
+	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaDosCartas (){
 		
 		Palo espada = new Espada ();
 		int aporteDeCarta1 = 7;
@@ -32,5 +32,21 @@ public class EspadaTest {
 		
 		Assert.assertEquals(envidoEsperado, envidoAcumulado);
 	}
+	
+	@Test
+	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaDosCartasMasGrandesDeTres (){
+		
+		Palo espada = new Espada ();
+		int aporteDeCarta1 = 7;
+		int aporteDeCarta2 = 6; 
+		int aporteDeCarta3 = 5;
+		int envidoEsperado = aporteDeCarta1 + aporteDeCarta2 + 20;
+		
+		int envidoAcumulado = espada.acumularEnvido ( aporteDeCarta1 );
+		envidoAcumulado = espada.acumularEnvido ( aporteDeCarta2 );
+		envidoAcumulado = espada.acumularEnvido ( aporteDeCarta3 );
+		Assert.assertEquals(envidoEsperado, envidoAcumulado);
+	}
+	
 	
 }

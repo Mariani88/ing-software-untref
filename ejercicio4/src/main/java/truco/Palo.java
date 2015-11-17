@@ -8,10 +8,13 @@ public abstract class Palo {
 	public int acumularEnvido(int aporteAEnvido) {
 		
 		this.cartasLeidas++;
-		this.envidoAcumulado += aporteAEnvido;
 		
-		if (this.cartasLeidas == 2 ){
-			this.envidoAcumulado +=20;
+		if (this.cartasLeidas < 3){
+			this.envidoAcumulado += aporteAEnvido;
+			
+			if (this.cartasLeidas == 2 ){
+				this.envidoAcumulado +=20;
+			}
 		}
 		
 		return this.envidoAcumulado;
