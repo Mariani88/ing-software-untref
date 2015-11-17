@@ -1,5 +1,5 @@
 package truco;
 
-public class Espada  extends Palo{
+public class Espada extends Palo {
 
 }
