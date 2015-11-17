@@ -32,4 +32,20 @@ public class BastoTest {
 		Assert.assertEquals(envidoEsperado, envidoAcumulado);
 	}
 	
+	
+	@Test
+	public void envidoAcumuladoDebeDevolverEnvidoAcumuladoParaDosCartasMasGrandesDeTres (){
+		
+		Palo basto = new Basto ();
+		int aporteDeCarta1 = 7;
+		int aporteDeCarta2 = 6; 
+		int aporteDeCarta3 = 5;
+		int envidoEsperado = aporteDeCarta1 + aporteDeCarta2 + 20;
+		
+		int envidoAcumulado = basto.acumularEnvido ( aporteDeCarta1 );
+		envidoAcumulado = basto.acumularEnvido ( aporteDeCarta2 );
+		envidoAcumulado = basto.acumularEnvido ( aporteDeCarta3 );
+		Assert.assertEquals(envidoEsperado, envidoAcumulado);
+	}
+	
 }
