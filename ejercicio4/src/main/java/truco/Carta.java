@@ -2,8 +2,18 @@ package truco;
 
 public class Carta {
 
-	public Carta(int numero1, Palo palo) {
-		// TODO Auto-generated constructor stub
+	private int aporteAEnvido;
+	private Palo paloDeCarta;
+	
+	public Carta(int numero, Palo palo) {
+		
+		this.aporteAEnvido = numero;
+		this.paloDeCarta = palo;
+	}
+
+	public int getAporteAEnvido() {
+		
+		return this.aporteAEnvido;
 	}
 
 
