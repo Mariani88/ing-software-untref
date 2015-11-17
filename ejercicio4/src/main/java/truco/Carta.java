@@ -19,6 +19,8 @@ public class Carta {
 		return this.aporteAEnvido;
 	}
 
-
-
+	public int contribuirAlEnvido() {
+		
+		return this.paloDeCarta.acumularEnvido(this.aporteAEnvido);
+	}
 }
